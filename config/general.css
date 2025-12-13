@@ -1,0 +1,192 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Moula Regular";
+  margin: 0 auto;
+  background: #f3f3f3;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  max-width: 1840px;
+  margin: 0 auto;
+  padding: 60px 0px;
+  overflow-wrap: break-word;
+}
+
+/* ФОРМА Оставить заявку */
+
+h1.configurator-heading {
+  font-family: "Moula Medium";
+  font-weight: 500;
+  font-size: 65px;
+  color: #191b1d;
+}
+
+h2.request-heading {
+  font-family: "Moula Medium";
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 90%;
+  color: #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.request-container {
+  border-radius: 0 0 30px 0;
+  background: #191b1d;
+  padding: 70px 30px;
+}
+
+.request-description {
+  font-family: "Moula Regular";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 105%;
+  color: #fff;
+  flex-basis: 634px;
+}
+
+.request-form fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.request-form legend {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 35px;
+  width: 80%;
+  margin-bottom: 100px;
+}
+
+.request-form .form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.request-form input {
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  border-radius: 10px 0;
+  width: 100%;
+  height: 80px;
+  padding: 30px 20px;
+}
+
+.request-form input::placeholder {
+  font-family: "Moula Medium";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  color: #959595;
+  text-transform: uppercase;
+}
+
+/* .request-form input[required]:placeholder-shown:after {
+  content: "\2A";
+  color: red;
+  margin-right: 5px;
+} */
+
+.request-form label {
+  flex-basis: 400px;
+  position: relative;
+}
+
+.request-form .form-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 1220px;
+  gap: 5px;
+}
+
+.request-form .form-btn {
+  font-family: "Moula Medium";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px 0;
+  flex-basis: 354px;
+  padding: 30px 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .request-form legend,
+  .request-form .form-item,
+  .request-form .form-container {
+    flex-direction: column;
+  }
+  .request-description,
+  .request-form .form-item,
+  .request-form label {
+    flex-basis: 0;
+    gap: 20px;
+  }
+  .form-item,
+  .request-form label {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1.configurator-heading {
+    font-size: 35px;
+    line-height: 100%;
+  }
+  section {
+    padding: 35px 0px;
+  }
+  .request-container {
+    padding: 45px 20px;
+  }
+  h2.request-heading {
+    font-size: 40px;
+  }
+  .request-description {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .request-form input {
+    padding: 20px;
+  }
+  .request-form legend {
+    margin-bottom: 50px;
+  }
+}

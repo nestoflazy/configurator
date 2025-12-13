@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Подбор блочно-модульной котельной</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="configurator.css" />
+    <link rel="stylesheet" href="font.css" />
+    <script src="./config.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Подбор блочно-модульной котельной -->
+      <section class="configurator">
+        <h1 class="configurator-heading">Подбор котельного оборудования</h1>
+        <div class="container">
+          <div class="item-scheme">
+            <img class="scheme-image" alt="" />
+            <img
+              class="download-scheme"
+              src="assets/img/download_icon.svg"
+              alt=""
+            />
+            <div class="overlay">
+              <div class="overlay__container">
+                <div class="overlay__item">
+                  <a href="#" class="overlay__btn">
+                    <span>Тепловая схема </span>
+                  </a>
+                  <a href="#" class="overlay__btn dwg-icon">
+                    <span>Тепловая схема </span>
+                  </a>
+                  <a href="#" class="overlay__btn">
+                    <span>Проект</span>
+                  </a>
+                </div>
+                <div class="overlay__item bottom">
+                  <a href="#" class="overlay__btn">
+                    <span>Спецификация основного оборудования</span>
+                  </a>
+                  <a href="#" class="overlay__btn search-btn"> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-selection">
+            <div class="selection__group">
+              <div class="selection-title">Выберите оборудование:</div>
+              <div id="radio-equipment" class="conf-radio-group">
+                <!-- btn -->
+                <input
+                  id="btnEquipment1"
+                  type="radio"
+                  name="equipmentBtn"
+                  class="conf-radio-btn"
+                  value="deaerator"
+                  checked
+                />
+                <label for="btnEquipment1" class="conf-label">
+                  Деаэратор
+                </label>
+                <!-- btn -->
+                <input
+                  id="btnEquipment2"
+                  type="radio"
+                  name="equipmentBtn"
+                  class="conf-radio-btn"
+                  value="economizers"
+                />
+                <label for="btnEquipment2" class="conf-label">
+                  Экономайзеры
+                </label>
+                <!-- btn -->
+                <input
+                  id="btnEquipment3"
+                  type="radio"
+                  name="equipmentBtn"
+                  class="conf-radio-btn"
+                  value="cooler"
+                />
+                <label for="btnEquipment3" class="conf-label">
+                  Охладитель стоков
+                </label>
+                <!-- btn -->
+                <input
+                  id="btnType4"
+                  type="radio"
+                  name="equipmentBtn"
+                  class="conf-radio-btn"
+                  value="condensate"
+                />
+                <label for="btnType4" class="conf-label">
+                  Станция перекачки конденсата
+                </label>
+              </div>
+            </div>
+            <div id="radio-product" class="selection__group">
+              <div class="selection-title">Производительность, т/ч:</div>
+              <div class="conf-radio-group">
+                <!-- btn -->
+                <input
+                  id="btnProduct1"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct1" class="conf-label"> 2 </label>
+                <!-- btn -->
+                <input
+                  id="btnProduct2"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct2" class="conf-label"> 3</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct3"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct3" class="conf-label"> 4</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct4"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct4" class="conf-label"> 6</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct5"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct5" class="conf-label"> 8</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct6"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct6" class="conf-label"> 10</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct7"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct7" class="conf-label"> 12</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct8"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct8" class="conf-label"> 14</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct9"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct9" class="conf-label"> 16</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct10"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct10" class="conf-label"> 20</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct11"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct11" class="conf-label"> 25</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct12"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct12" class="conf-label"> 30</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct13"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct13" class="conf-label"> 40 </label>
+                <!-- btn -->
+                <input
+                  id="btnProduct14"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct14" class="conf-label"> 50 </label>
+                <!-- btn -->
+                <input
+                  id="btnProduct15"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct15" class="conf-label"> 60</label>
+                <!-- btn -->
+                <input
+                  id="btnProduct16"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct16" class="conf-label"> 70 </label>
+                <!-- btn -->
+                <input
+                  id="btnProduct17"
+                  type="radio"
+                  name="productivity"
+                  class="conf-radio-btn"
+                />
+                <label for="btnProduct17" class="conf-label"> 80 </label>
+
+                <!-- btn / input-->
+                <input
+                  id="btnProductEnter1"
+                  type="number"
+                  name="productivity"
+                  class="conf-enter-btn"
+                  placeholder="Ввести вручную"
+                />
+              </div>
+            </div>
+            <div id="radio-volume" class="selection__group">
+              <div class="selection-title">Полезный объем бака, м.куб.:</div>
+              <div class="conf-radio-group">
+                <!-- btn -->
+                <input
+                  id="btnVolume1"
+                  type="radio"
+                  name="volumeBtn"
+                  class="conf-radio-btn"
+                />
+                <label for="btnVolume1" class="conf-label"> 25 </label>
+                <!-- btn -->
+                <input
+                  id="btnVolume2"
+                  type="radio"
+                  name="volumeBtn"
+                  class="conf-radio-btn"
+                />
+                <label for="btnVolume2" class="conf-label"> 50 </label>
+               <!-- btn / input-->
+                <input
+                  id="btnProductEnter2"
+                  type="number"
+                  name="volumeBtn"
+                  class="conf-enter-btn"
+                  placeholder="Ввести вручную"
+                />
+            </div>
+            <hr class="hr-line" />
+            <button class="selection-btn" type="submit">Подобрать</button>
+          </div>
+        </div>
+      </section>
+      <!-- Оставить заявку -->
+      <section class="request-form">
+        <div class="request-container">
+          <form action="" method="post">
+            <fieldset>
+              <legend>
+                <h2 class="request-heading">Оставить заявку</h2>
+                <div class="request-description">
+                  Оставьте заявку для индивидуального подбора оборудования, мы
+                  проверим корректность вашего подбора и вышлем Вам 3D модель
+                </div>
+              </legend>
+              <div class="form-container">
+                <div class="form-item">
+                  <label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="ВАШЕ ИМЯ"
+                      required
+                    />
+                  </label>
+                  <label>
+                    <input
+                      type="number"
+                      id="phone"
+                      placeholder="ВАШ ТЕЛЕФОН"
+                      required
+                    />
+                  </label>
+                  <label>
+                    <input
+                      type="text"
+                      id="email"
+                      placeholder="Электронная почта"
+                      required
+                    />
+                  </label>
+                </div>
+                <button class="form-item form-btn" type="submit">
+                  ОТПРАВИТЬ
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

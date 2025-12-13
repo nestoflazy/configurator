@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Конфигуратор</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="main_page.css" />
+    <link rel="stylesheet" href="font.css" />   
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Конфигуратор -->
+      <section class="configurator-option">
+        <h1 class="configurator-heading">Конфигуратор</h1>
+        <div class="container">
+          <a href="configurator__1.html" class="item-conf">
+            <div class="title-conf">Подбор блочно-модульной котельной</div>
+            <div class="subtitle-conf">
+              Схемы, спецификации основного оборудования, паспорта котельной
+            </div>
+          </a>
+          <a href="configurator__2.html" class="item-conf">
+            <div class="title-conf">Подбор котельного оборудования</div>
+            <div class="subtitle-conf">
+              Чертежи, принципиальные схемы, 3D модели
+            </div>
+          </a>
+        </div>
+      </section>
+      <!-- Оставить заявку -->
+      <section class="request-form">
+        <div class="request-container">
+          <form action="" method="post">
+            <fieldset>
+              <legend>
+                <h2 class="request-heading">Оставить заявку</h2>
+                <div class="request-description">
+                  Оставьте заявку для индивидуального подбора оборудования, мы
+                  проверим корректность вашего подбора и вышлем Вам 3D модель
+                </div>
+              </legend>
+              <div class="form-container">
+                <div class="form-item">
+                   <label>
+                  <input
+                    type="text"
+                    id="name"                    
+                    placeholder="ВАШЕ ИМЯ"
+                    required
+                  />
+                </label>
+                <label>
+                  <input
+                    type="number"
+                    id="phone"
+                    placeholder="ВАШ ТЕЛЕФОН"
+                    required
+                  />
+                </label>
+                <label>
+                  <input
+                    type="text"
+                    id="email"
+                    placeholder="Электронная почта"
+                    required
+                  />
+                </label>
+                </div>
+                <button class="form-item form-btn" type="submit">
+                 ОТПРАВИТЬ
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

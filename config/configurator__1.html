@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Подбор блочно-модульной котельной</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="configurator.css" />
+    <link rel="stylesheet" href="font.css" />
+    <script src="./config.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Подбор блочно-модульной котельной -->
+      <section class="configurator">
+        <h1 class="configurator-heading">Подбор блочно-модульной котельной</h1>
+        <div class="container">
+          <div class="item-scheme">
+            <img class="scheme-image" alt="" />
+            <img
+              class="download-scheme"
+              src="assets/img/download_icon.svg"
+              alt=""
+            />
+            <div class="overlay">
+              <div class="overlay__container">
+                <div class="overlay__item">
+                  <a href="#" class="overlay__btn">
+                    <span>Тепловая схема </span>
+                  </a>
+                  <a href="#" class="overlay__btn dwg-icon">
+                    <span>Тепловая схема </span>
+                  </a>
+                  <a href="#" class="overlay__btn">
+                    <span>Проект</span>
+                  </a>
+                </div>
+                <div class="overlay__item bottom">
+                  <a href="#" class="overlay__btn">
+                    <span>Спецификация основного оборудования</span>
+                  </a>
+                  <a href="#" class="overlay__btn search-btn"> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-selection">
+            <div class="selection__group">
+              <div class="selection-title">Тип котельной</div>
+              <div id="radio-type" class="conf-radio-group">
+                <!-- btn -->
+                <input
+                  id="btnType1"
+                  type="radio"
+                  name="typeBtn"
+                  class="conf-radio-btn"
+                  value="steam"
+                  checked
+                />
+                <label for="btnType1" class="conf-label"> Паровая </label>
+                <!-- btn -->
+                <input
+                  id="btnType2"
+                  type="radio"
+                  name="typeBtn"
+                  class="conf-radio-btn"
+                  value="water"
+                />
+                <label for="btnType2" class="conf-label"> Водогрейная </label>
+                <!-- btn -->
+                <input
+                  id="btnType3"
+                  type="radio"
+                  name="typeBtn"
+                  class="conf-radio-btn"
+                  value="termo"
+                />
+                <label for="btnType3" class="conf-label">
+                  Термомаслянная
+                </label>
+              </div>
+            </div>
+            <div id="radio-perf" class="selection__group">
+              <div class="selection-title">Производительность котельной</div>
+              <div class="conf-radio-group">
+                <!-- btn -->
+                <input
+                  id="btnPerf1"
+                  type="radio"
+                  name="perfBtn"
+                  class="conf-radio-btn"
+                  checked
+                />
+                <label for="btnPerf1" class="conf-label"> 2 тонны в час </label>
+                <!-- btn -->
+                <input
+                  id="btnPerf2"
+                  type="radio"
+                  name="perfBtn"
+                  class="conf-radio-btn"
+                />
+                <label for="btnPerf2" class="conf-label"> 4 тонны в час </label>
+                <!-- btn -->
+                <input
+                  id="btnPerf3"
+                  type="radio"
+                  name="perfBtn"
+                  class="conf-radio-btn"
+                />
+                <label for="btnPerf3" class="conf-label"> 6 тонны в час </label>
+                <!-- btn -->
+                <input
+                  id="btnPerf4"
+                  type="radio"
+                  name="perfBtn"
+                  class="conf-radio-btn"
+                />
+                <label for="btnPerf4" class="conf-label"> 8 тонны в час </label>
+              </div>
+            </div>
+            <div id="radio-count" class="selection__group">
+              <div class="selection-title">Количество котлов</div>
+              <div class="conf-radio-group">
+                <!-- btn -->
+                <input
+                  id="btnCount1"
+                  type="radio"
+                  name="countBtn"
+                  class="conf-radio-btn"
+                  checked
+                />
+                <label for="btnCount1" class="conf-label"> 1 котел </label>
+                <!-- btn -->
+                <input
+                  id="btnCount2"
+                  type="radio"
+                  name="countBtn"
+                  class="conf-radio-btn"
+                />
+                <label for="btnCount2" class="conf-label"> 2 котла </label>
+                <!-- btn -->
+                <input
+                  id="btnCount3"
+                  type="radio"
+                  name="countBtn"
+                  class="conf-radio-btn"
+                />
+                <label for="btnCount3" class="conf-label"> 3 котла </label>
+                <!-- btn -->
+                <input
+                  id="btnCount4"
+                  type="radio"
+                  name="countBtn"
+                  class="conf-radio-btn"
+                />
+                <label for="btnCount4" class="conf-label"> 4 котла </label>
+              </div>
+            </div>
+            <div id="radio-return" class="selection__group">
+              <div class="selection-title">Возврат конденсата</div>
+              <div class="conf-radio-group">
+                <!-- btn -->
+                <input
+                  id="btnRet1"
+                  type="radio"
+                  name="retBtn"
+                  class="conf-radio-btn"
+                  checked
+                />
+                <label for="btnRet1" class="conf-label"> Есть </label>
+                <!-- btn -->
+                <input
+                  id="btnRet2"
+                  type="radio"
+                  name="retBtn"
+                  class="conf-radio-btn"
+                />
+                <label for="btnRet2" class="conf-label"> Нет </label>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <button class="selection-btn" type="submit">Подобрать</button>
+          </div>
+        </div>
+      </section>
+      <!-- Оставить заявку -->
+      <section class="request-form">
+        <div class="request-container">
+          <form action="" method="post">
+            <fieldset>
+              <legend>
+                <h2 class="request-heading">Оставить заявку</h2>
+                <div class="request-description">
+                  Оставьте заявку для индивидуального подбора оборудования, мы
+                  проверим корректность вашего подбора и вышлем Вам 3D модель
+                </div>
+              </legend>
+              <div class="form-container">
+                <div class="form-item">
+                  <label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="ВАШЕ ИМЯ"
+                      required
+                    />
+                  </label>
+                  <label>
+                    <input
+                      type="number"
+                      id="phone"
+                      placeholder="ВАШ ТЕЛЕФОН"
+                      required
+                    />
+                  </label>
+                  <label>
+                    <input
+                      type="text"
+                      id="email"
+                      placeholder="Электронная почта"
+                      required
+                    />
+                  </label>
+                </div>
+                <button class="form-item form-btn" type="submit">
+                  ОТПРАВИТЬ
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

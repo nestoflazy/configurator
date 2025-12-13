@@ -1,0 +1,67 @@
+
+
+/* Конфигуратор */
+
+.configurator-option .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.item-conf {
+  flex-basis: 910px;
+  background: #4252ad;
+  border-radius: 15px 0;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.title-conf {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  padding-right: 50px;
+  position: relative;
+}
+
+.title-conf::after {
+  content: "🡕";
+  position: absolute;
+  font-size: 24px;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle-conf {
+  font-family: "Moula Regular";
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 130%;
+}
+
+@media (max-width: 768px) {
+  .configurator-option .container {
+    flex-wrap: wrap;
+  }
+  .title-conf {
+    font-size: 30px;
+  }
+  .subtitle-conf {
+    font-size: 16px;
+  }
+}
+
+
