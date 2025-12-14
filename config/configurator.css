@@ -307,4 +307,7 @@ hr.hr-line {
     width: 20px;
     height: 20px;
   }
+  .item-scheme {
+    display: none;
+  }
 }

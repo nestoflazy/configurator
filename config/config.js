@@ -1,3 +1,11 @@
+function debounce(func, ms) {
+  let timeout;
+  return function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, arguments), ms);
+  };
+}
+
 // Конфигуратор 1
 
 const radioType = document.querySelectorAll("#radio-type input");
@@ -45,21 +53,41 @@ const radioEquipment = document.querySelectorAll("#radio-equipment input");
 const radioProduct = document.querySelectorAll("#radio-product input");
 const radioVolume = document.querySelectorAll("#radio-volume input");
 
+const inputProduct = document.querySelector('#btnProductEnter1');
+const inputVolume = document.querySelector('#btnProductEnter2');
+
 let radioEquipmentValue = "";
 let radioProductValue = "";
 let radioVolumeValue = "";
 
+let lastProductTarget = '';
+let lastVolumeTarget = '';
+
 radioEquipment.forEach((el) =>
-  el.addEventListener("change", (e) => {
+  el.addEventListener("click", (e) => {
     radioEquipmentValue = e.target.value;    
     loadSchemeImage();
   })
 );
 radioProduct.forEach((el) =>
   el.addEventListener("click", (e) => {
-    radioProductValue = e.target.value;
-    if (e.target.checked) {
-      e.target.checked=false
+    if (e.target.id === 'btnProductEnter1') {
+      lastProductTarget.checked = false;
+      lastProductTarget = e.target;
+      return;
+    }
+
+    if (radioProductValue === e.target.value && lastProductTarget.id === 'btnProductEnter1') {
+      radioProductValue = e.target.value;
+      lastProductTarget = e.target;
+      inputProduct.value = '';
+    } else if (radioProductValue === e.target.value) {
+      e.target.checked = false;
+      radioProductValue = '';
+      lastProductTarget = '';
+    } else {
+      radioProductValue = e.target.value;
+      lastProductTarget = e.target;
     }
 
     loadSchemeImage();
@@ -67,11 +95,40 @@ radioProduct.forEach((el) =>
 );
 radioVolume.forEach((el) =>
   el.addEventListener("click", (e) => {
-    radioVolumeValue = e.target.value;
+    if (e.target.id === 'btnProductEnter2') {
+      lastVolumeTarget.checked = false;
+      lastVolumeTarget = e.target;
+      return;
+    }
+
+    if (radioVolumeValue === e.target.value && lastVolumeTarget.id === 'btnProductEnter2') {
+      radioVolumeValue = e.target.value;
+      lastVolumeTarget = e.target;
+      inputVolume.value = '';
+    } else if (radioVolumeValue === e.target.value) {
+      e.target.checked = false;
+      radioVolumeValue = '';
+      lastVolumeTarget = '';
+    } else {
+      radioVolumeValue = e.target.value;
+      lastVolumeTarget = e.target;
+    }
 
     loadSchemeImage();
   })
 );
+
+inputProduct.addEventListener('input', (e) => {
+  radioProductValue = e.target.value;
+
+  loadSchemeImage();
+})
+
+inputVolume.addEventListener('input', (e) => {
+  radioVolumeValue = e.target.value;
+
+  loadSchemeImage();
+})
 
 function loadSchemeImage(imageUrl = "assets/img/scheme.png") {
   const schemeImg = document.querySelector(".scheme-image");
@@ -104,6 +161,7 @@ function loadSchemeImage(imageUrl = "assets/img/scheme.png") {
       schemeImg.style.display = "block";
       activeDownloadBtn.classList.add("--active");
       downloadIndicator.style.display = "none";
+      activeDownloadBtn.style.display = "flex";
 
       // Очищаем обработчики
       preloadImg.onload = null;
