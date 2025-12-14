@@ -76,14 +76,14 @@
 }
 
 .overlay__btn::before {
-  content: url(assets/img/pdf_icon.svg);
+  content: url(../assets/img/pdf_icon.svg);
   width: 17px;
   height: 22px;
   opacity: 0.3;
 }
 
 .overlay__btn.dwg-icon::before {
-  content: url(assets/img/dwg_icon.svg);
+  content: url(../assets/img/dwg_icon.svg);
   opacity: 0.3;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .overlay__btn.search-btn::before {
-  content: url(assets/img/search_icon.svg);
+  content: url(../assets/img/search_icon.svg);
   width: 20px;
   height: 20px;
 }
@@ -263,7 +263,8 @@ hr.hr-line {
   .selection-title {
     font-size: 23px;
   }
-  .item-selection label {
+  .item-selection label,
+  .conf-enter-btn {
     font-size: 21px;
     padding: 10px 20px;
   }

@@ -130,7 +130,7 @@ inputVolume.addEventListener('input', (e) => {
   loadSchemeImage();
 })
 
-function loadSchemeImage(imageUrl = "assets/img/scheme.png") {
+function loadSchemeImage(imageUrl = "../assets/img/scheme.png") {
   const schemeImg = document.querySelector(".scheme-image");
   const downloadIndicator = document.querySelector(".download-scheme");
   const activeDownloadBtn = document.querySelector(".item-scheme");

@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Moula Medium";
+  src: url("../assets/fonts/Moula-Medium.eot");
+  src: url("../assets/fonts/Moula-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/Moula-Medium.woff") format("woff"),
+    url("../assets/fonts/Moula-Medium.woff2") format("woff2"),
+    url("../assets/fonts/Moula-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Moula Regular";
+  src: url("../assets/fonts/Moula-Regular.eot");
+  src: url("../assets/fonts/Moula-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/Moula-Regular.woff") format("woff"),
+    url("../assets/fonts/Moula-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Moula-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
