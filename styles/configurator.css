@@ -75,16 +75,26 @@
   color: #b5b5b5;
 }
 
+.overlay__btn .show-mobile {
+  display: none;
+}
+
 .overlay__btn::before {
-  content: url(../assets/img/pdf_icon.svg);
-  width: 17px;
+  content: "";
+  width: 20px;
   height: 22px;
   opacity: 0.3;
 }
 
+.overlay__btn.pdf-icon::before {
+  background: url("../assets/img/pdf_icon.png") no-repeat center;
+  background-size: 19px auto;
+}
+
 .overlay__btn.dwg-icon::before {
-  content: url(../assets/img/dwg_icon.svg);
-  opacity: 0.3;
+  background: url("../assets/img/dwg_icon.svg") no-repeat center;
+  background-size: 21px auto;
+  width: 22px;
 }
 
 .overlay__btn.search-btn {
@@ -92,9 +102,11 @@
 }
 
 .overlay__btn.search-btn::before {
-  content: url(../assets/img/search_icon.svg);
+  background: url("../assets/img/search_icon.svg") no-repeat center;
+  background-size: 19px auto;
   width: 20px;
   height: 20px;
+  background-size: 20px auto;
 }
 
 .item-scheme.--active .overlay__btn {
@@ -297,16 +309,30 @@ hr.hr-line {
     padding: 10px 13px;
     font-size: 16px;
   }
-  .overlay__btn.search-btn {
-    padding: 10px;
-  }
   .overlay__btn::before {
     width: 15px;
     height: 17px;
   }
+  .overlay__btn.search-btn {
+    padding: 10px;
+  }
   .overlay__btn.search-btn::before {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
+    background-size: 17px auto;
+  }
+  .overlay__btn.pdf-icon::before {
+    background-size: 15px auto;
+  }
+  .overlay__btn.dwg-icon::before {
+    background-size: 17px auto;
+    width: 17px;
+  }
+  .overlay__btn .show-desktop {
+    display: none;
+  }
+  .overlay__btn .show-mobile {
+    display: flex;
   }
   .item-scheme {
     display: none;
