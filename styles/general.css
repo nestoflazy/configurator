@@ -168,10 +168,11 @@ input::-webkit-inner-spin-button {
 @media (max-width: 768px) {
   h1.configurator-heading {
     font-size: 35px;
+    padding-top: 10px;
     line-height: 100%;
   }
   section {
-    padding: 35px 0px;
+    padding: 25px 0px;
   }
   .request-container {
     padding: 45px 20px;
