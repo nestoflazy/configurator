@@ -102,6 +102,10 @@ input::-webkit-inner-spin-button {
   padding: 30px 20px;
 }
 
+input:focus::placeholder {
+  opacity: 0; 
+}
+
 .request-form input::placeholder {
   font-family: "Moula Medium";
   font-weight: 500;
@@ -112,11 +116,27 @@ input::-webkit-inner-spin-button {
   text-transform: uppercase;
 }
 
-/* .request-form input[required]:placeholder-shown:after {
-  content: "\2A";
-  color: red;
-  margin-right: 5px;
-} */
+.request-form label::after {
+  content: "*";
+  font-size: 20px; 
+  color: #bbadcc;
+  position: absolute;
+  top: 43%;
+  right: 15px;
+  opacity: 0;
+}
+
+.required-field input:not(:focus):placeholder-shown ~ ::after,
+.required-field:has(input:not(:focus):placeholder-shown)::after {
+  opacity: 1;
+}
+
+.required-field input:focus ~ ::after,
+.required-field input:not(:placeholder-shown) ~ ::after,
+.required-field:has(input:focus)::after,
+.required-field:has(input:not(:placeholder-shown))::after {
+  opacity: 0;
+}
 
 .request-form label {
   flex-basis: 400px;

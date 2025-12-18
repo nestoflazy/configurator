@@ -18,7 +18,7 @@ let radioPerfValue = "";
 let radioCountValue = "";
 let radioReturnValue = "";
 
-radioType.forEach((el) =>
+radioType?.forEach((el) =>
   el.addEventListener("change", (e) => {
     radioTypeValue = e.target.value;
 
@@ -69,7 +69,7 @@ radioEquipment.forEach((el) =>
     loadSchemeImage();
   })
 );
-radioProduct.forEach((el) =>
+radioProduct?.forEach((el) =>
   el.addEventListener("click", (e) => {
     if (e.target.id === 'btnProductEnter1') {
       lastProductTarget.checked = false;
@@ -118,13 +118,13 @@ radioVolume.forEach((el) =>
   })
 );
 
-inputProduct.addEventListener('input', (e) => {
+inputProduct?.addEventListener('input', (e) => {
   radioProductValue = e.target.value;
 
   loadSchemeImage();
 })
 
-inputVolume.addEventListener('input', (e) => {
+inputVolume?.addEventListener('input', (e) => {
   radioVolumeValue = e.target.value;
 
   loadSchemeImage();
