@@ -29,18 +29,16 @@
 }
 
 .title-conf::after {
-  content: "🡕";
+  content:  '';
+  background: url(../assets/img/arrow-link.svg) no-repeat 50% 65%;
+  background-size: 22px auto;
   position: absolute;
-  font-size: 24px;
   top: 0;
   right: 0;
   width: 45px;
   height: 45px;
   border: 2px solid #fff;
   border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .subtitle-conf {
@@ -61,7 +59,7 @@
     font-size: 18px;
   }
   .title-conf::after {
-    font-size: 20px;
+     background-size: 17px auto;
     width: 33px;
     height: 33px;
   }
